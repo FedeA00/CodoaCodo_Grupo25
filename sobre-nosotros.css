@@ -1,6 +1,6 @@
-El archivo "sobre-nosotros.html" tiene la funcion de ser la pagina que hablara de los integrantes del grupo"
+/*El archivo "sobre-nosotros.html" tiene la funcion de ser la pagina que hablara de los integrantes del grupo"
 */
-* {font-family: 'Courier New', Courier, monospace;}
+* {font-family: 'Noto Sans', sans-serif;}
 /* Contenedor */
 .container {
     display: grid;

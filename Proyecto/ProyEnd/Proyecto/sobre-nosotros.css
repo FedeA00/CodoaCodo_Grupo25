@@ -1,0 +1,131 @@
+/*El archivo "sobre-nosotros.html" tiene la funcion de ser la pagina que hablara de los integrantes del grupo"
+*/
+* {font-family: 'Noto Sans', sans-serif;}
+/* Contenedor */
+.container {
+    display: grid;
+
+    margin-top: 100px;
+
+    /* por las dudas */
+    grid-template: 100px 1fr auto / 20% auto;
+
+    /* Distribucion de la pagina */
+    grid-template-areas: "header header "
+                         "ind subcontainer"
+                         "pie pie ";
+    gap: 5px;
+}
+
+/* Subcontainer */
+.subcontainer {
+    display: grid;
+    grid-template: 50% 50% / 50% 50%;
+    grid-template-areas: "t1 t2"
+                         "t3 t4";
+    gap: 5px;
+}
+
+/* Areas del grid */
+.header    { grid-area: header;    background-color: rgb(45, 145, 175); text-align: center;}
+.ind       { grid-area: ind;       background-color: lightblue; }
+.t1        { grid-area: t1;       background-color: turquoise;  }
+.t2        { grid-area: t2;       background-color: turquoise;  }
+.t3        { grid-area: t3;       background-color: turquoise;  }
+.t4        { grid-area: t4;       background-color: turquoise;  }
+.pie       { grid-area: pie;       background-color: rgb(45, 145, 175); text-align: center;}
+
+
+/* Grid cosas */
+.tarj {
+    padding: 10px;
+    color: darkblue;
+    border-radius: 10px;
+}
+
+/* Imagen con bordes redondeados, con limites de tamaño           */
+
+img {
+    border-radius: 30px;
+    width: 100%;
+    max-width:400px;
+  }
+
+/* Punto de corte para pantallas tipo tablet (menos de 920px)     */
+@media only screen and (max-width: 920px) {
+    .container {
+        /* Uso un atajo para definir 3 filas / 2 columna */
+        grid-template: 100px auto 60px / 30% auto;
+
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas:
+            "header header"
+            "ind subcontainer"
+            "pie pie";
+    }
+}
+
+/* Punto de corte para pantallas tipo celular (menos de 600px)    */
+@media only screen and (max-width: 600px) {
+    .container {
+        /* Uso un atajo para definir 5 filas / 1 columna */
+        grid-template: 100px auto auto auto 60px / 100%;
+
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas: "header"  "ind" "subcontainer" "pie";
+    }
+    .subcontainer {
+        display: grid;
+        grid-template: 1fr 1fr 1fr 1fr / 100%;
+    
+        /* Distribucion del subcontainer */
+        grid-template-areas: "t1" "t2""t3" "t4";
+        gap: 5px;
+    }
+}
+
+
+/* MENU */
+
+
+
+
+.menu{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:9999;
+}
+.btn-menu{display: none;}
+.menu .logobox{margin-left: 30px;}
+.menu .logobox h1 > a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Pacifico', cursive; 
+    
+    
+}
+.menu .logobox h1 > a > i{color:#f8b30e; margin-right: 10px;}
+.menu .list-container{margin-right: 30px;}
+.menu .list-container .lists{display: flex;}
+.menu .list-container .lists li{list-style: none;}
+
+.menu .list-container .lists li a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 19px;
+    margin:0px 7px;
+    padding: 5px;
+    border-radius: 3px;
+    transition: 300ms;
+}
+.menu .list-container .lists li a:hover{color:#f8b30e;}
+.menu .list-container .lists li a.active{color:#f8b30e;}

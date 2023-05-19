@@ -1,0 +1,132 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    min-height: 100vh;
+    background-image: linear-gradient(-45deg, #e3ddd9 50%, #36221c 50%);
+    font-family: 'Raleway', sans-serif;
+}
+
+.titulo {
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.subtitulo {
+    margin: 0;
+    color: #000;
+    display: inline;
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    
+    
+}
+
+.imgart { 
+    color: #fff;
+    margin: 7px 0;
+    font-size: 50px;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px rgba(0,0,0,0.7);
+    font-family: 'Dancing Script', cursive;
+    margin-top: 0;
+}
+
+.linea-division {
+    width: 80%;
+    height: 2px;
+    background-color: #36221c;
+}
+
+/* ----------------------- */
+/* -------- Menu --------  */
+/* ----------------------- */
+
+.menu{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:9999;
+}
+.btn-menu{display: none;}
+.menu .logobox{margin-left: 30px;}
+.menu .logobox h1 > a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Pacifico', cursive; 
+    
+    
+}
+.menu .logobox h1 > a > i{color:#f8b30e; margin-right: 10px;}
+.menu .list-container{margin-right: 30px;}
+.menu .list-container .lists{display: flex;}
+.menu .list-container .lists li{list-style: none;}
+
+.menu .list-container .lists li a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 19px;
+    margin:0px 7px;
+    padding: 5px;
+    border-radius: 3px;
+    transition: 300ms;
+}
+.menu .list-container .lists li a:hover{color:#f8b30e;}
+.menu .list-container .lists li a.active{color:#f8b30e;}
+
+
+
+
+/* ----------------------- */
+/* Estilos de Materialize  */
+/* ----------------------- */
+
+.carousel{
+    min-height: 500px;
+}
+
+
+.carousel .carousel-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    /* background: #ccc; */
+    width: 500px;
+    height: 500px;
+
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 15px;
+    
+}
+
+.carousel .indicators .indicator-item {
+    border-radius: 0;
+    transform:  rotate(45deg);
+    margin: 0px 15px;
+    background: #36221c;
+}
